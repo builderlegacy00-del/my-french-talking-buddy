@@ -434,6 +434,11 @@ function answerKeywords(a){
 }
 function stage3FollowUp(a){
   const k=answerKeywords(a), n=norm(a);
+  // Learning / language goals: respond to what the learner actually said instead of repeating the same fallback.
+  if(/apprend|apprendre|francais|français|langue|parler|confiance|progresser/.test(n)){
+    if(/confiance|parler/.test(n)) return {fr:'Dans quelles situations aimeriez-vous parler français avec plus de confiance ?',reason:'You said that you want to speak French with confidence, so the Buddy asks where you would like to use French.'};
+    return {fr:'Pourquoi apprenez-vous le français ?',reason:'You mentioned learning French, so the Buddy asks about your reason for learning it.'};
+  }
   if(/aime.*apprendre|apprendre.*aime/.test(n)) return {fr:'Qu’est-ce que vous aimez le plus apprendre ?',reason:'You said that you love learning, so the Buddy asks what you enjoy learning most.'};
   if(k.includes('work') && k.includes('time')) return {fr:'À quelle heure finissez-vous généralement le travail ?',reason:'You mentioned work and a time, so the Buddy follows up about your working hours.'};
   if(k.includes('work')) return {fr:'Qu’est-ce que vous aimez le plus dans votre travail ?',reason:'You mentioned work, so the Buddy asks about what you enjoy in your job.'};
@@ -442,7 +447,7 @@ function stage3FollowUp(a){
   if(k.includes('past')) return {fr:'Et qu’est-ce que vous avez fait après ?',reason:'You mentioned a past event, so the Buddy asks what happened afterwards.'};
   if(k.includes('feelings')) return {fr:'Pourquoi vous sentez-vous comme ça ?',reason:'You mentioned how you feel, so the Buddy asks for a little more detail about your feelings.'};
   if(k.includes('time')) return {fr:'Et que faites-vous ensuite ?',reason:'You mentioned a time or part of your day, so the Buddy asks about what comes next.'};
-  if(n) return {fr:'D’accord. Pouvez-vous m’en dire un peu plus ?',reason:'The Buddy understood your answer and invites you to add another detail.'};
+  if(n) return {fr:'D’accord. Qu’est-ce qui est le plus important pour vous à ce sujet ?',reason:'The Buddy understood your answer and asks a new question about the same topic instead of repeating the previous prompt.'};
   return {fr:'Pouvez-vous répondre avec une phrase complète en français ?',reason:'The Buddy is giving you a simple prompt so you can practise a complete French sentence.'};
 }
 function stage3Vocabulary(){
