@@ -347,9 +347,13 @@ function checkAnswer(){
     }
 
     const reply=(stage3Mode==='conversation') ? stage3FollowUp(a) : contextualResponse(t,a);
-    lastResponse=reply;
+    // stage3FollowUp returns an object {fr, reason}; pass the French text and reason
+    // separately so the UI never renders the JavaScript object as "[object Object]".
+    const nextFr = (reply && typeof reply === 'object') ? reply.fr : reply;
+    const nextReason = (reply && typeof reply === 'object') ? (reply.reason || '') : '';
+    lastResponse=nextFr;
     addChat('you',a);
-    setTimeout(()=>setActiveFollowUp(reply),350);
+    setTimeout(()=>setActiveFollowUp(nextFr,nextReason),350);
   }catch(e){
     console.error(e);
     $('status').textContent='⚠️ Buddy could not check that answer. Please try the button again.';
