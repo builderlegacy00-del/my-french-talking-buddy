@@ -4,7 +4,7 @@
 .tag{display:inline-block;padding:5px 9px;border-radius:99px;background:#eef5fb;margin:3px;font-size:12px}.stage3list{line-height:1.6;padding-left:20px}.wordcard{padding:10px 12px;border:1px solid #dfe5ea;border-radius:12px;margin:7px 0;background:#fafcfe}
 .stickyReply{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:rgba(255,255,255,.97);border-top:1px solid #cfd8e3;box-shadow:0 -4px 18px rgba(20,40,60,.12);padding:9px max(12px,calc((100vw - 820px)/2 + 12px));backdrop-filter:blur(8px)}.stickyReplyInner{max-width:820px;margin:auto}.stickyLabel{font-weight:800;font-size:13px;color:#34495e;margin-bottom:5px}.stickyQuestion{background:#f4f8fc;border:1px solid #dbe5ef;border-radius:11px;padding:7px 9px;margin-bottom:7px}.stickyQuestionFr{font-weight:700;font-size:14px;line-height:1.3;color:#1f2937}.stickyQuestionEn{font-size:12px;color:#667085;margin-top:2px;line-height:1.25}.stickyQuestion.correction{background:#fff5eb;border-color:#f0c98b}.stickyQuestion.correction .stickyQuestionFr{color:#7a3f00}.stickyRow{display:flex;gap:7px;align-items:stretch}.stickyInput{flex:1;min-width:0;min-height:48px;max-height:88px;resize:none;padding:10px 12px;border:1px solid #cfd6de;border-radius:13px;font:inherit;background:#fff}.stickyBtn{min-height:48px;padding:8px 12px;border-radius:13px;border:1px solid #cfd6de;background:#fff;font:inherit;white-space:nowrap}.stickyBtn.primary{font-weight:800;background:#f7fbff}.stickyHint{font-size:11px;color:#667085;margin-top:4px}@media(max-width:560px){.stickyReply{padding:8px 9px}.stickyRow{gap:6px}.stickyBtn{padding:8px 9px;font-size:14px}.stickyInput{font-size:15px}.stickyHint{display:none}.stickyQuestionEn{font-size:11px}}body{padding-bottom:195px}</style></head><body><main class="wrap">
 <div class="stickyReply" id="stickyReply"><div class="stickyReplyInner"><div class="stickyLabel" id="stickyLabel">🎤 Your turn — always available</div><div class="stickyQuestion" id="stickyQuestion"><div class="stickyQuestionFr" id="stickyQuestionFr">🤖 Buddy is getting ready…</div><div class="stickyQuestionEn" id="stickyQuestionEn">🇬🇧 Your next question will appear here.</div></div><div class="stickyRow"><textarea id="stickyAnswer" class="stickyInput" rows="1" placeholder="Type your French answer here…"></textarea><button id="stickySpeak" class="stickyBtn primary">🎙️ Speak</button><button id="stickyCheck" class="stickyBtn">✅ Check</button></div><div class="stickyHint">Buddy’s latest question or correction stays here while you scroll. Your draft is saved automatically on this device.</div></div></div>
-<section class="card"><h1>🇫🇷 My French Talking Buddy — Stage 4.0.5 — Persistent Resume + Context-Aware Tutor</h1><div class="muted">Speak naturally in French through guided role-play, receive precise corrections, practise real situations, and get follow-up questions that respond to what you actually said.</div><div style="margin-top:10px"><span class="pill">🎙️ Speech recognition</span><span class="pill">✍️ Corrections</span><span class="pill">🔊 French audio</span><span class="pill">💬 Conversation</span><span class="pill">🎓 Tutor coaching</span><span class="pill">⏳ Smart tense check</span><span class="pill">🎯 Tense challenge</span><span class="pill">📱 Quick answer controls</span><span class="pill">🧠 Conversation memory</span><span class="pill">🗣️ Real conversation</span><span class="pill">📚 Vocabulary coach</span><span class="pill">📊 My progress</span><span class="pill">📖 Question translation</span><span class="pill">💡 Correction explanation</span><span class="pill">🧠 Adaptive coaching</span><span class="pill">🗂️ Vocabulary from your answers</span><span class="pill">📈 Session progress</span><span class="pill">🧠 Context-aware follow-up</span><span class="pill">💾 Persistent resume</span><span class="pill">🎭 Immersive role-play</span><span class="pill">📖 Storytelling</span></div></section>
+<section class="card"><h1>🇫🇷 My French Talking Buddy — Stage 4.0.6 — Dual Persistent Resume + Context-Aware Tutor</h1><div class="muted">Speak naturally in French through guided role-play, receive precise corrections, practise real situations, and get follow-up questions that respond to what you actually said.</div><div style="margin-top:10px"><span class="pill">🎙️ Speech recognition</span><span class="pill">✍️ Corrections</span><span class="pill">🔊 French audio</span><span class="pill">💬 Conversation</span><span class="pill">🎓 Tutor coaching</span><span class="pill">⏳ Smart tense check</span><span class="pill">🎯 Tense challenge</span><span class="pill">📱 Quick answer controls</span><span class="pill">🧠 Conversation memory</span><span class="pill">🗣️ Real conversation</span><span class="pill">📚 Vocabulary coach</span><span class="pill">📊 My progress</span><span class="pill">📖 Question translation</span><span class="pill">💡 Correction explanation</span><span class="pill">🧠 Adaptive coaching</span><span class="pill">🗂️ Vocabulary from your answers</span><span class="pill">📈 Session progress</span><span class="pill">🧠 Context-aware follow-up</span><span class="pill">💾 Persistent resume</span><span class="pill">🎭 Immersive role-play</span><span class="pill">📖 Storytelling</span></div></section>
 <section class="card"><strong>Choose your conversation</strong><div class="row" style="margin-top:9px"><select id="scenario"></select><select id="speed"><option value="normal">Normal French</option><option value="slow">Slow French</option></select><select id="level"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option></select></div></section>
 <section class="card"><div class="note"><strong>💾 Auto-save &amp; resume:</strong> Your current question, conversation, and unfinished French answer are saved automatically on this device. You can leave the Buddy and come back without losing your place.</div></section><section class="card"><div class="muted">Buddy says:</div><div id="prompt" class="speech"></div><div id="meaning" class="english"></div><div class="row" style="margin-top:12px"><button id="listen" class="primary">🔊 Listen</button><button id="repeat">🔁 Repeat</button><button id="next">➡️ Next question</button></div><div class="quick" style="margin-top:12px"><div style="font-weight:700;margin-bottom:7px">📱 Quick answer</div><div class="row"><button id="quickSpeak" class="primary">🎙️ Speak answer</button><button id="quickCheck">✅ Check my French</button></div><div class="note" style="margin-top:7px">Speak here — no need to scroll back to the Your turn section. You can also type your answer in the box below.</div></div></section>
 <section class="card"><strong>🎤 Your turn</strong><div class="note" style="margin-top:4px">Your spoken answer will appear here, or type your French yourself.</div><textarea id="answer" style="width:100%;min-height:105px;margin-top:8px;padding:12px;border:1px solid #cfd6de;border-radius:13px;font:inherit" placeholder="Tap Speak and answer in French, or type here..."></textarea><div class="row" style="margin-top:10px"><button id="speak" class="primary">🎤 Speak</button><button id="micTest">🎙️ Test microphone</button><button id="check">✅ Check my French</button><button id="showHelp">🇬🇧 English help</button></div><div id="meter" class="meter"><span></span></div><div id="progressBox" style="margin-top:10px;padding:10px 12px;border-radius:12px;background:#eef5fb;color:#34495e">
@@ -560,363 +560,151 @@ function roleplayEnglish(fr){
 }
 let stage4Asked=[];
 const stage4Stats={answers:0,corrections:0,words:new Set(),recentTopics:[]};
-const STAGE4_RESUME_KEY='frenchBuddyStage4Resume_v405';
+const STAGE4_RESUME_KEY='frenchBuddyStage4Resume_v406';
+const STAGE4_IDB_DB='FrenchBuddyResumeDB';
+const STAGE4_IDB_STORE='resume';
 let restoringStage4=false;
+
+function stage4ResumePayload(){
+  const a=document.getElementById('answer'), s=document.getElementById('stickyAnswer');
+  return {
+    version:'4.0.6',
+    savedAt:Date.now(),
+    stage4Active,
+    stage4Role,
+    scenarioId:scenario&&scenario.id,
+    turn,
+    activeTurn,
+    pendingCorrection,
+    lastResponse,
+    lastUserAnswer,
+    lastCorrection,
+    sessionMemory,
+    stage4Asked,
+    stage4Stats:{
+      answers:stage4Stats.answers,
+      corrections:stage4Stats.corrections,
+      words:[...stage4Stats.words],
+      recentTopics:stage4Stats.recentTopics
+    },
+    stage3Mode,
+    answer:a?a.value:'',
+    stickyAnswer:s?s.value:'',
+    speed:document.getElementById('speed')?.value||'normal',
+    level:document.getElementById('level')?.value||'beginner',
+    chatHTML:document.getElementById('chat')?.innerHTML||''
+  };
+}
 function saveStage4Resume(){
+  const payload=stage4ResumePayload();
   try{
-    const a=document.getElementById('answer'), s=document.getElementById('stickyAnswer');
-    const payload={
-      version:'4.0.5',
-      savedAt:Date.now(),
-      stage4Active,
-      stage4Role,
-      scenarioId:scenario&&scenario.id,
-      turn,
-      activeTurn,
-      pendingCorrection,
-      lastResponse,
-      lastUserAnswer,
-      lastCorrection,
-      sessionMemory,
-      stage4Asked,
-      stage4Stats:{answers:stage4Stats.answers,corrections:stage4Stats.corrections,words:[...stage4Stats.words],recentTopics:stage4Stats.recentTopics},
-      stage3Mode,
-      answer:a?a.value:'',
-      stickyAnswer:s?s.value:'',
-      speed:document.getElementById('speed')?.value||'normal',
-      level:document.getElementById('level')?.value||'beginner',
-      chatHTML:document.getElementById('chat')?.innerHTML||''
-    };
     localStorage.setItem(STAGE4_RESUME_KEY,JSON.stringify(payload));
+    const st=document.getElementById('status');
+    if(st && (payload.answer||payload.stickyAnswer||payload.activeTurn))
+      st.dataset.saved='1';
+  }catch(e){}
+  stage4SaveIDB(payload);
+}
+function stage4OpenIDB(){
+  return new Promise((resolve,reject)=>{
+    if(!('indexedDB' in window)){reject(new Error('IndexedDB unavailable'));return;}
+    const req=indexedDB.open(STAGE4_IDB_DB,1);
+    req.onupgradeneeded=()=>{try{req.result.createObjectStore(STAGE4_IDB_STORE,{keyPath:'id'})}catch(e){}};
+    req.onsuccess=()=>resolve(req.result);
+    req.onerror=()=>reject(req.error||new Error('IndexedDB open failed'));
+  });
+}
+async function stage4SaveIDB(payload){
+  try{
+    const db=await stage4OpenIDB();
+    await new Promise((resolve,reject)=>{
+      const tx=db.transaction(STAGE4_IDB_STORE,'readwrite');
+      tx.objectStore(STAGE4_IDB_STORE).put({id:'latest',payload});
+      tx.oncomplete=resolve; tx.onerror=()=>reject(tx.error);
+    });
+    db.close();
   }catch(e){}
 }
-function clearStage4Resume(){try{localStorage.removeItem(STAGE4_RESUME_KEY)}catch(e){}}
-function restoreStage4Resume(){
+async function stage4LoadIDB(){
   try{
-    const raw=localStorage.getItem(STAGE4_RESUME_KEY); if(!raw)return false;
-    const p=JSON.parse(raw); if(!p||p.version!=='4.0.5')return false;
-    restoringStage4=true;
-    if(p.scenarioId){const idx=SCENARIOS.findIndex(x=>x.id===p.scenarioId); if(idx>=0){scenario=SCENARIOS[idx]; const el=document.getElementById('scenario'); if(el)el.value=idx;}}
-    if(p.speed){const el=document.getElementById('speed'); if(el)el.value=p.speed;}
-    if(p.level){const el=document.getElementById('level'); if(el)el.value=p.level;}
-    stage4Active=!!p.stage4Active; stage4Role=p.stage4Role||'work';
-    turn=Number.isFinite(p.turn)?p.turn:0;
-    activeTurn=p.activeTurn||null; pendingCorrection=p.pendingCorrection||null;
-    lastResponse=p.lastResponse||''; lastUserAnswer=p.lastUserAnswer||''; lastCorrection=p.lastCorrection||'';
-    sessionMemory=Array.isArray(p.sessionMemory)?p.sessionMemory:[];
-    stage4Asked=Array.isArray(p.stage4Asked)?p.stage4Asked:[];
-    stage4Stats.answers=p.stage4Stats?.answers||0; stage4Stats.corrections=p.stage4Stats?.corrections||0;
-    stage4Stats.words=new Set(p.stage4Stats?.words||[]); stage4Stats.recentTopics=p.stage4Stats?.recentTopics||[];
-    stage3Mode=p.stage3Mode||'conversation';
-    const a=document.getElementById('answer'), st=document.getElementById('stickyAnswer');
-    if(activeTurn){
-      document.getElementById('prompt').textContent=activeTurn.q||'';
-      document.getElementById('meaning').textContent='🇬🇧 '+(activeTurn.en||'');
-      if(pendingCorrection){
-        updateStickyQuestion(pendingCorrection.fix||'', '', 'correction');
-      }else{
-        updateStickyQuestion(activeTurn.q||'',activeTurn.en||'','question');
-      }
-    }
-    if(a)a.value=p.answer||'';
-    if(st)st.value=p.stickyAnswer||p.answer||'';
-    const chat=document.getElementById('chat'); if(chat&&p.chatHTML)chat.innerHTML=p.chatHTML;
-    stage4RenderProgress();
-    const status=document.getElementById('status'); if(status)status.textContent='💾 Previous practice restored. Your draft and conversation are still here.';
-    restoringStage4=false;
-    return true;
-  }catch(e){restoringStage4=false;return false;}
+    const db=await stage4OpenIDB();
+    const value=await new Promise((resolve,reject)=>{
+      const tx=db.transaction(STAGE4_IDB_STORE,'readonly');
+      const req=tx.objectStore(STAGE4_IDB_STORE).get('latest');
+      req.onsuccess=()=>resolve(req.result?.payload||null);
+      req.onerror=()=>reject(req.error);
+    });
+    db.close();
+    return value;
+  }catch(e){return null}
 }
-const STAGE4_STOP=new Set(('je tu il elle on nous vous ils elles le la les un une des du de a au aux et ou mais parce que qui que quoi dans sur avec pour par en est suis es sont ai as avons avez ont être avoir faire très bien aujourd hui maintenant mon ma mes ton ta tes votre vos ce cette ces ça se me te lui leur un une ne pas plus aussi comme donc puis alors').split(' '));
-const STAGE4_VOCAB={
-  work:[['collègue','colleague','Je travaille avec mes collègues.'],['équipe','team','Je prépare un rapport pour mon équipe.'],['réunion','meeting','J’ai une réunion cet après-midi.'],['projet','project','Je travaille sur un nouveau projet.']],
-  travel:[['destination','destination','Ma destination est Paris.'],['séjour','stay','Mon séjour dure une semaine.'],['réserver','to book','Je voudrais réserver une chambre.'],['voyage','trip','Mon voyage commence demain.']],
-  restaurant:[['réservation','reservation','J’ai une réservation pour deux personnes.'],['plat','dish','Je voudrais choisir un plat.'],['boisson','drink','Je voudrais une boisson, s’il vous plaît.'],['addition','bill','L’addition, s’il vous plaît.']],
-  shopping:[['taille','size','Quelle taille vous faut-il ?'],['couleur','colour','Je préfère cette couleur.'],['chercher','to look for','Je cherche une chemise.'],['prix','price','Quel est le prix ?']],
-  social:[['rencontrer','to meet','Je suis ravi(e) de vous rencontrer.'],['loisirs','free-time activities','J’aime parler de mes loisirs.'],['famille','family','Je passe du temps avec ma famille.'],['week-end','weekend','Qu’est-ce que vous faites le week-end ?']],
-  phone:[['rendez-vous','appointment','Je voudrais prendre un rendez-vous.'],['convenir','to suit/be suitable','Quelle heure vous conviendrait ?'],['modifier','to change','Je voudrais modifier le rendez-vous.'],['besoin','need','J’ai besoin de votre aide.']],
-  story:[['raconter','to tell','Je vais vous raconter ma journée.'],['matinée','morning','Ma matinée était chargée.'],['ensuite','afterwards','Ensuite, je suis allé(e) au travail.'],['meilleur moment','best moment','C’était le meilleur moment de ma journée.']]
-};
-function stage4RenderProgress(){
-  const p=$('stage4Progress'), v=$('stage4Vocab'); if(!p||!v)return;
-  p.innerHTML='<strong>📈 Session progress</strong><br>Answers: '+stage4Stats.answers+' &nbsp;•&nbsp; Corrections: '+stage4Stats.corrections+' &nbsp;•&nbsp; Useful words: '+stage4Stats.words.size;
-  const list=[...stage4Stats.words].slice(-6);
-  v.innerHTML='<strong>📚 Vocabulary from your answers</strong><br>'+(list.length?list.map(w=>'<span class="pill" style="display:inline-block;margin-top:6px">'+escapeHtml(w)+'</span>').join(' '):'<span class="muted">Your useful words will appear here after you answer.</span>');
+function clearStage4Resume(){
+  try{localStorage.removeItem(STAGE4_RESUME_KEY)}catch(e){}
+  try{
+    stage4OpenIDB().then(db=>new Promise(resolve=>{
+      const tx=db.transaction(STAGE4_IDB_STORE,'readwrite');
+      tx.objectStore(STAGE4_IDB_STORE).delete('latest');
+      tx.oncomplete=()=>{db.close();resolve()};
+      tx.onerror=()=>{db.close();resolve()};
+    })).catch(()=>{});
+  }catch(e){}
 }
-function stage4CoachTip(a,qualityType='natural'){
-  const n=norm(a), coach=$('stage4Coach'); if(!coach)return;
-  let tip='Keep your answer natural and add one small detail when you can.';
-  if(/parce que|car/.test(n)) tip='Excellent habit: giving a reason with <strong>parce que</strong> makes your French more conversational.';
-  else if(/mais|cependant/.test(n)) tip='Good connector: <strong>mais</strong> helps you compare or contrast two ideas.';
-  else if(/demain|bientot|vais|va |vont /.test(n)) tip='Good future practice. Try adding a time phrase such as <strong>demain</strong>, <strong>ce soir</strong>, or <strong>la semaine prochaine</strong>.';
-  else if(/hier|la semaine derniere|j ai |je suis alle/.test(n)) tip='Good past-tense practice. Add <strong>ensuite</strong> or <strong>après</strong> to make a story flow naturally.';
-  else if(/travail|collegue|equipe|projet/.test(n)) tip='Useful work vocabulary. Try adding one precise detail about the task, person, or time.';
-  else if(/voyage|vacances|hotel|train|avion/.test(n)) tip='Useful travel vocabulary. Try adding where, when, or how you will travel.';
-  else if(/aime|adore|prefere/.test(n)) tip='Great way to express preferences. You can extend it with <strong>parce que…</strong>.';
-  coach.innerHTML='<strong>🧑‍🏫 Coach tip:</strong> '+tip;
-}
-function stage4LearnFromAnswer(a){
-  const n=norm(a), r=STAGE4_VOCAB[stage4Role]||[];
-  // Learn role-specific vocabulary when the learner's answer touches the topic.
-  r.forEach(item=>{const key=norm(item[0]); if(n.includes(key.split(' ')[0]) || (key==='collègue'&&/colleg/.test(n)) || (key==='équipe'&&/equipe/.test(n))) stage4Stats.words.add(item[0]);});
-  // Also retain a few meaningful words actually used by the learner.
-  n.split(' ').filter(w=>w.length>=5 && !STAGE4_STOP.has(w)).slice(0,4).forEach(w=>stage4Stats.words.add(w));
+function stage4ApplyResume(p){
+  if(!p||p.version!=='4.0.6')return false;
+  restoringStage4=true;
+  if(p.scenarioId){
+    const idx=SCENARIOS.findIndex(x=>x.id===p.scenarioId);
+    if(idx>=0){scenario=SCENARIOS[idx];const el=document.getElementById('scenario');if(el)el.value=idx;}
+  }
+  if(p.speed){const el=document.getElementById('speed');if(el)el.value=p.speed;}
+  if(p.level){const el=document.getElementById('level');if(el)el.value=p.level;}
+  stage4Active=!!p.stage4Active;
+  stage4Role=p.stage4Role||'work';
+  turn=Number.isFinite(p.turn)?p.turn:0;
+  activeTurn=p.activeTurn||null;
+  pendingCorrection=p.pendingCorrection||null;
+  lastResponse=p.lastResponse||'';
+  lastUserAnswer=p.lastUserAnswer||'';
+  lastCorrection=p.lastCorrection||'';
+  sessionMemory=Array.isArray(p.sessionMemory)?p.sessionMemory:[];
+  stage4Asked=Array.isArray(p.stage4Asked)?p.stage4Asked:[];
+  stage4Stats.answers=p.stage4Stats?.answers||0;
+  stage4Stats.corrections=p.stage4Stats?.corrections||0;
+  stage4Stats.words=new Set(p.stage4Stats?.words||[]);
+  stage4Stats.recentTopics=p.stage4Stats?.recentTopics||[];
+  stage3Mode=p.stage3Mode||'conversation';
+
+  if(activeTurn){
+    document.getElementById('prompt').textContent=activeTurn.q||'';
+    document.getElementById('meaning').textContent='🇬🇧 '+(activeTurn.en||'');
+    if(pendingCorrection) updateStickyQuestion(pendingCorrection.fix||'', '', 'correction');
+    else updateStickyQuestion(activeTurn.q||'',activeTurn.en||'','question');
+  }
+  const a=document.getElementById('answer'), st=document.getElementById('stickyAnswer');
+  if(a)a.value=p.answer||'';
+  if(st)st.value=p.stickyAnswer||p.answer||'';
+  const chat=document.getElementById('chat');
+  if(chat&&p.chatHTML)chat.innerHTML=p.chatHTML;
   stage4RenderProgress();
+  const status=document.getElementById('status');
+  if(status)status.textContent='💾 Previous practice restored. Your draft and conversation are still here.';
+  restoringStage4=false;
+  return true;
 }
-function stage4Choose(items,avoidFr=''){
-  const avoid=norm(avoidFr);
-  const fresh=items.filter(x=>norm(x[1])!==avoid && !stage4Asked.includes(norm(x[1])));
-  const pool=fresh.length?fresh:items.filter(x=>norm(x[1])!==avoid);
-  const chosen=pool[Math.floor(Math.random()*pool.length)] || items[0];
-  if(chosen)stage4Asked.push(norm(chosen[1]));
-  if(stage4Asked.length>12)stage4Asked.shift();
-  return chosen;
-}
-function roleplayFollowUp(a,avoidFr=''){
-  const n=norm(a), r=ROLEPLAY[stage4Role], avoid=norm(avoidFr);
-  const matched=[];
-  for(const item of r.next){
-    const keys=item[0].split('|');
-    if(keys.some(k=>n.includes(norm(k))))matched.push(item);
-  }
-  if(matched.length){
-    const item=stage4Choose(matched,avoidFr);
-    return {fr:item[1],reason:'The Buddy noticed the topic in your answer and chose a fresh follow-up so the role-play stays focused without simply repeating the previous question.'};
-  }
-  // Rotate through the role-play questions instead of using the same fallback repeatedly.
-  const all=r.next.slice();
-  if(norm(r.fallback[0])!==avoid)all.push(["",r.fallback[0],r.fallback[1]]);
-  const item=stage4Choose(all,avoidFr);
-  return {fr:item[1],reason:'The Buddy understood your answer and chose another question from the same real-life situation.'};
+async function restoreStage4Resume(){
+  let local=null, idb=null;
+  try{
+    const raw=localStorage.getItem(STAGE4_RESUME_KEY);
+    if(raw)local=JSON.parse(raw);
+  }catch(e){}
+  idb=await stage4LoadIDB();
+  const candidates=[local,idb].filter(Boolean).filter(p=>p.version==='4.0.6');
+  if(!candidates.length)return false;
+  candidates.sort((a,b)=>(b.savedAt||0)-(a.savedAt||0));
+  const p=candidates[0];
+  return stage4ApplyResume(p);
 }
 
-function startStage4(){
-  stage4Active=true;
-  stage3Mode='conversation';
-  stage4Role=$('roleplayMode').value;
-  const r=ROLEPLAY[stage4Role];
-  turn=0; activeTurn=null; pendingCorrection=null; lastCorrection=''; sessionMemory=[]; stage4Asked.length=0; stage4Stats.answers=0; stage4Stats.corrections=0; stage4Stats.words=new Set(); stage4Stats.recentTopics=[]; stage4RenderProgress();
-  $('prompt').textContent=r.opening; $('meaning').textContent='🇬🇧 '+r.en; updateStickyQuestion(r.opening,r.en,'question');
-  $('chat').innerHTML=''; addChat('buddy',r.opening); lastResponse=r.opening;
-  $('roleplayCoach').innerHTML='<strong>🎭 '+r.name+' role-play started.</strong><br>Stay in character and answer as naturally as you can. The Buddy will correct genuine French mistakes but will not force you to copy one exact sentence.';
-  $('stage3Mode').innerHTML='<strong>🎭 Stage 4 role-play:</strong> '+r.name+' — answer naturally and keep the situation moving.';
-  $('status').textContent='🎭 Stage 4 role-play started.';
-  $('stage4').scrollIntoView({behavior:'smooth',block:'center'});
-  setTimeout(()=>speak(r.opening),150);
-  saveStage4Resume();
-}
-stage4RenderProgress();
-$('startRoleplay').onclick=startStage4;
-$('roleplayMode').onchange=()=>{if(stage4Active)startStage4()};
-
-function stage3FollowUp(a,avoidFr=''){
-  const n=norm(a), avoid=norm(avoidFr);
-  const choose=(fr,en,reason,alternateFr,alternateEn)=>{
-    if(avoid && norm(fr)===avoid && alternateFr) return {fr:alternateFr,en:alternateEn,reason:reason+' The Buddy chooses a different question instead of repeating the previous one.'};
-    return {fr,en,reason};
-  };
-
-  // The key Stage 4.0.4 improvement:
-  // respond to the learner's actual meaning before falling back to generic topics.
-  // Feelings / tiredness
-  if(/\bfatig/.test(n) || /\bepuis/.test(n) || /\bstress/.test(n) || /\bstresse/.test(n) || /\bmal\b/.test(n)){
-    return choose(
-      'Pourquoi êtes-vous fatiguée aujourd’hui ?',
-      'Why are you tired today?',
-      'You said that you are tired today, so the Buddy follows that idea instead of changing the subject.',
-      'Qu’est-ce qui vous aide quand vous êtes fatiguée ?',
-      'What helps you when you are tired?'
-    );
-  }
-
-  // Work
-  if(/\btravail\b|\btravaille\b|\bbureau\b|\bcolleg/.test(n)){
-    if(/\bfatig/.test(n)){
-      return choose(
-        'Est-ce que votre travail vous fatigue beaucoup en ce moment ?',
-        'Is your work making you very tired at the moment?',
-        'You mentioned both work and tiredness, so the Buddy connects the two ideas.',
-        'Qu’est-ce qui vous occupe le plus au travail en ce moment ?',
-        'What is keeping you busiest at work at the moment?'
-      );
-    }
-    if(/\bprojet\b/.test(n)){
-      return choose(
-        'Qu’est-ce que vous faites sur ce projet ?',
-        'What are you doing on this project?',
-        'You mentioned a project, so the Buddy asks for a concrete detail about it.',
-        'Avec quels collègues travaillez-vous sur ce projet ?',
-        'Which colleagues are you working with on this project?'
-      );
-    }
-    if(/\bequipe\b/.test(n)){
-      return choose(
-        'Avec quels collègues travaillez-vous dans votre équipe ?',
-        'Which colleagues do you work with on your team?',
-        'You mentioned your team, so the Buddy asks about the people you work with.',
-        'Quel est votre rôle dans cette équipe ?',
-        'What is your role in this team?'
-      );
-    }
-    return choose(
-      'Qu’est-ce qui vous occupe le plus au travail en ce moment ?',
-      'What is keeping you busiest at work at the moment?',
-      'You mentioned work, so the Buddy asks about the specific thing you are working on.',
-      'Qu’est-ce que vous aimez le plus dans votre travail ?',
-      'What do you like most about your work?'
-    );
-  }
-
-  // Travel
-  if(/\bvoyage\b|\bvoyager\b|\bvoyag\b|\bvacance\b|\bhotel\b|\bgare\b|\bavion\b|\btrain\b|\bparis\b|\bdestination\b/.test(n)){
-    if(/\bprochain\b|\bdemain\b|\bbientot\b/.test(n)){
-      return choose(
-        'Quand allez-vous partir ?',
-        'When are you going to leave?',
-        'You mentioned a future trip, so the Buddy asks when it will happen.',
-        'Où allez-vous séjourner ?',
-        'Where are you going to stay?'
-      );
-    }
-    return choose(
-      'Où aimeriez-vous voyager ?',
-      'Where would you like to travel?',
-      'You mentioned travel, so the Buddy asks about the destination you would like to visit.',
-      'Quand aimeriez-vous partir ?',
-      'When would you like to leave?'
-    );
-  }
-
-  // Family / people
-  if(/\bfamill\b|\benfant\b|\bmar\b|\bfemme\b|\bparents\b|\bamie\b|\bami\b/.test(n)){
-    return choose(
-      'Qu’aimez-vous faire avec votre famille ?',
-      'What do you like to do with your family?',
-      'You mentioned family or someone close to you, so the Buddy asks about what you enjoy doing together.',
-      'À quelle fréquence passez-vous du temps avec votre famille ?',
-      'How often do you spend time with your family?'
-    );
-  }
-
-  // Learning French / confidence
-  if(/\bfrancais\b|\bapprend\b|\bapprendre\b|\blangue\b|\bparler\b|\bconfiance\b/.test(n)){
-    if(/\bconfiance\b|\bparler\b/.test(n)){
-      return choose(
-        'Dans quelles situations aimeriez-vous parler français avec plus de confiance ?',
-        'In what situations would you like to speak French with more confidence?',
-        'You mentioned speaking French with confidence, so the Buddy asks where you want to use French more comfortably.',
-        'Avec quels collègues aimeriez-vous parler français ?',
-        'Which colleagues would you like to speak French with?'
-      );
-    }
-    return choose(
-      'Pourquoi apprenez-vous le français ?',
-      'Why are you learning French?',
-      'You mentioned learning or speaking French, so the Buddy asks about your reason for learning it.',
-      'Qu’est-ce que vous aimez le plus apprendre en français ?',
-      'What do you like learning most in French?'
-    );
-  }
-
-  // Preferences / hobbies
-  if(/\baime\b|\baimerais\b|\badore\b|\bprefere\b|\bloisir\b|\bmusique\b|\bfilm\b|\blivre\b/.test(n)){
-    return choose(
-      'Qu’est-ce que vous aimez faire pendant votre temps libre ?',
-      'What do you like to do in your free time?',
-      'You expressed a preference or mentioned an interest, so the Buddy asks about your free-time activities.',
-      'Pourquoi aimez-vous cette activité ?',
-      'Why do you like this activity?'
-    );
-  }
-
-  // Past events
-  if(/\bhier\b|\bsemaine derniere\b|\bmois dernier\b|\bai travaille\b|\bsuis alle\b|\bsuis allee\b|\bfait\b/.test(n)){
-    return choose(
-      'Et qu’est-ce que vous avez fait après ?',
-      'And what did you do afterwards?',
-      'You described a past event, so the Buddy asks what happened next.',
-      'Comment vous êtes-vous senti(e) après ?',
-      'How did you feel afterwards?'
-    );
-  }
-
-  // Future
-  if(/\bdemain\b|\bsemaine prochaine\b|\bbientot\b|\bvais\b|\bvoudrais\b|\baimerais\b/.test(n)){
-    return choose(
-      'Et qu’est-ce que vous aimeriez faire ensuite ?',
-      'And what would you like to do next?',
-      'You mentioned a future plan or intention, so the Buddy asks about the next step.',
-      'Qu’aimeriez-vous faire demain ?',
-      'What would you like to do tomorrow?'
-    );
-  }
-
-  // Time / routine
-  if(/\bmatin\b|\bsoir\b|\bheure\b|\bhuit\b|\bneuf\b|\bdix\b|\broutine\b|\bhabituellement\b|\bdhabitude\b/.test(n)){
-    return choose(
-      'Et que faites-vous ensuite ?',
-      'And what do you do afterwards?',
-      'You mentioned a time or routine, so the Buddy asks what happens next.',
-      'À quelle heure faites-vous cela habituellement ?',
-      'What time do you usually do that?'
-    );
-  }
-
-  // General fallback, but still tied to the learner's answer.
-  return choose(
-    'Pouvez-vous m’en dire un peu plus à ce sujet ?',
-    'Can you tell me a little more about that?',
-    'The Buddy could not identify one strong topic, so it asks you to expand naturally on what you just said.',
-    'Pouvez-vous me donner un exemple ?',
-    'Can you give me an example?'
-  );
-}
-
-// Stage 4 overrides the follow-up engine while a role-play is active.
-const stage3FollowUpOriginal=stage3FollowUp;
-stage3FollowUp=function(a,avoidFr=''){
-  if(stage4Active)return roleplayFollowUp(a,avoidFr);
-  return stage3FollowUpOriginal(a,avoidFr);
-};
-
-function stage3Vocabulary(){
-  const words=commonVocab.filter(x=>!progress3.vocab.includes(x[0])).slice(0,5);
-  if(!words.length){
-    $('stage3Coach').innerHTML='<div class="good"><strong>📚 Great work!</strong><br>You have already seen all of today’s Stage 3 vocabulary. Start another conversation and try using these words naturally.</div>';
-    return;
-  }
-  words.forEach(w=>{if(!progress3.vocab.includes(w[0]))progress3.vocab.push(w[0])});
-  saveStage3Progress();
-  $('stage3Coach').innerHTML='<div class="coach"><strong>📚 Vocabulary for your next answers</strong><div class="stage3list">'+words.map(w=>'<div class="wordcard"><b>'+escapeHtml(w[0])+'</b> — '+escapeHtml(w[1])+'<br><span class="tiny">'+escapeHtml(w[2])+'</span> <button onclick="speak('+JSON.stringify(w[2]).replace(/"/g,'&quot;')+')">🔊 Hear it</button></div>').join('')+'</div><div class="note">Try using at least one of these expressions in your next answer.</div></div>';
-}
-function stage3Mistakes(){
-  const items=[];
-  const last=sessionMemory.slice(-8);
-  last.forEach(x=>{
-    const c=correctionFor(x.answer);
-    if(c && c.fix && norm(c.fix)!==norm(x.answer))items.push({a:x.answer,fix:c.fix,why:c.why});
-  });
-  if(!items.length){
-    $('stage3Coach').innerHTML='<div class="good"><strong>🎯 No specific mistake detected yet.</strong><br>Keep speaking naturally. If the Buddy finds a correction, it will appear here for targeted practice.</div>';
-    return;
-  }
-  $('stage3Coach').innerHTML='<div class="correction"><strong>🎯 Your targeted practice</strong><div class="stage3list">'+items.map(x=>'<div class="wordcard"><b>You said:</b> '+escapeHtml(x.a)+'<br><b>Try:</b> '+escapeHtml(x.fix)+'<br><span class="tiny">'+escapeHtml(String(x.why).replace(/\*\*/g,''))+'</span> <button onclick="speak('+JSON.stringify(x.fix).replace(/"/g,'&quot;')+')">🔊 Hear correction</button></div>').join('')+'</div></div>';
-}
-function startStage3(){
-  stage3Mode='conversation';
-  $('stage3Mode').innerHTML='<strong>🗣️ Real conversation:</strong> The Buddy will respond to your actual answer and ask a connected follow-up. Speak or type freely.';
-  $('status').textContent='🗣️ Stage 3 real conversation started.';
-  $('answer').focus();
-  stage3Scroll();
-}
-function stage3Scroll(){setTimeout(()=>$('stage3').scrollIntoView({behavior:'smooth',block:'center'}),80)}
-$('realConversation').onclick=startStage3;
-$('vocabCoach').onclick=()=>{stage3Mode='vocab';$('stage3Mode').innerHTML='<strong>📚 Vocabulary coach:</strong> Learn useful expressions and try them in your next answer.';stage3Vocabulary();stage3Scroll()};
-$('mistakePractice').onclick=()=>{stage3Mode='mistakes';$('stage3Mode').innerHTML='<strong>🎯 Mistake practice:</strong> Review corrections from this conversation and practise the improved form.';stage3Mistakes();stage3Scroll()};
-$('resetProgress').onclick=()=>{if(confirm('Reset your Stage 3 progress on this device?')){progress3={answers:0,natural:0,corrections:0,vocab:[]};saveStage3Progress();$('status').textContent='Stage 3 progress reset.'}};
-renderStage3Progress();
-
-async function testMic(){if(!navigator.mediaDevices?.getUserMedia){$('status').textContent='This browser cannot request microphone access here.';return false}try{let st=await navigator.mediaDevices.getUserMedia({audio:true});st.getTracks().forEach(t=>t.stop());$('status').textContent='✅ Microphone access is working. Tap 🎤 Speak and answer in French.';return true}catch(e){$('status').textContent='Microphone access was blocked ('+e.name+'). Please allow Chrome to use the microphone.';return false}}
 $('speak').onclick=async()=>{let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){$('status').textContent='Speech recognition is not supported by this browser. You can type your answer.';return}if(!(await testMic()))return;if(recognition)recognition.stop();recognition=new SR();recognition.lang='fr-FR';recognition.continuous=false;recognition.interimResults=true;recognition.maxAlternatives=1;$('status').textContent='🎤 Listening… speak in French now.';recognition.onresult=e=>{let r=e.results[e.results.length-1][0].transcript;$('answer').value=r;if($('stickyAnswer'))$('stickyAnswer').value=r;saveStage4Resume();$('status').textContent=(e.results[e.results.length-1].isFinal?'I heard: ':'Listening: ')+r};recognition.onerror=e=>{let msg={'no-speech':'I did not hear speech. Tap Speak and try again.','network':'The speech-recognition service could not be reached. Check your internet connection.','not-allowed':'Chrome did not allow speech recognition. Check the microphone permission for this site.','service-not-allowed':'The browser speech-recognition service is unavailable.'};$('status').textContent='🎤 '+(msg[e.error]||('Speech recognition: '+e.error))};recognition.onend=()=>{if($('status').textContent.startsWith('🎤 Listening'))$('status').textContent='Listening stopped.'};try{recognition.start()}catch(e){$('status').textContent='Please tap Speak again.'}};
 $('tensePractice').onclick=()=>{
   const idx=SCENARIOS.findIndex(s=>s.id==='tenses');
@@ -941,11 +729,13 @@ document.getElementById('stickySpeak').onclick=()=>{syncMainFromSticky();documen
 document.getElementById('stickyCheck').onclick=()=>{syncMainFromSticky();document.getElementById('check').click();setTimeout(saveStage4Resume,450);};
 
 render();
-// Stage 4.0.5: automatically resume the latest practice on this device after reload/navigation.
-if(restoreStage4Resume()){
-  const coach=document.getElementById('roleplayCoach');
-  if(coach && stage4Active) coach.innerHTML='<strong>💾 Previous role-play restored.</strong><br>Your Buddy has resumed the latest saved conversation. Your unfinished answer is back in Your turn.';
-}
+// Stage 4.0.6: restore from the newest available copy (localStorage or IndexedDB).
+restoreStage4Resume().then(restored=>{
+  if(restored){
+    const coach=document.getElementById('roleplayCoach');
+    if(coach && stage4Active) coach.innerHTML='<strong>💾 Previous role-play restored.</strong><br>Your Buddy has resumed the latest saved conversation. Your unfinished answer is back in Your turn.';
+  }
+});
 window.addEventListener('pagehide',saveStage4Resume);
 window.addEventListener('beforeunload',saveStage4Resume);
 if('speechSynthesis'in window)speechSynthesis.getVoices();
