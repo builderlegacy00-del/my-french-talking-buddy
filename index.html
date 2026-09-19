@@ -957,4 +957,48 @@ window.addEventListener('pageshow',()=>setTimeout(stage4ReliableRestore,150));
 window.addEventListener('pagehide',saveStage4Resume);
 window.addEventListener('beforeunload',saveStage4Resume);
 if('speechSynthesis'in window)speechSynthesis.getVoices();
+</script><script>
+(function(){
+  // Stage 4.5: robust touch/click wiring for all Check controls.
+  // Replace the existing button nodes so old inline/property handlers cannot interfere.
+  const ids=['check','quickCheck','stickyCheck'];
+  let lastCheckTap=0;
+  function runCheck(){
+    const now=Date.now();
+    if(now-lastCheckTap<700) return;
+    lastCheckTap=now;
+    try{
+      const main=document.getElementById('answer');
+      const sticky=document.getElementById('stickyAnswer');
+      const value=((sticky&&sticky.value)||(main&&main.value)||'').trim();
+      if(main) main.value=value;
+      if(sticky) sticky.value=value;
+      const status=document.getElementById('status');
+      if(!value){ if(status) status.textContent='Please speak or type an answer first.'; return; }
+      if(status) status.textContent='🧑‍🏫 Checking your French…';
+      try{ if(typeof persistCurrentAnswerNow==='function') persistCurrentAnswerNow(); }catch(e){}
+      if(typeof checkAnswer==='function') checkAnswer();
+      else if(status) status.textContent='⚠️ The French-checking function is unavailable. Your answer is saved.';
+      setTimeout(()=>{try{if(typeof saveStage4Resume==='function') saveStage4Resume();}catch(e){}},450);
+    }catch(err){
+      console.error(err);
+      try{if(typeof persistCurrentAnswerNow==='function') persistCurrentAnswerNow();}catch(e){}
+      const status=document.getElementById('status');
+      if(status) status.textContent='⚠️ Buddy could not check that answer. Your answer is saved.';
+    }
+  }
+  function wire(id){
+    const old=document.getElementById(id);
+    if(!old) return;
+    const b=old.cloneNode(true);
+    b.removeAttribute('onclick');
+    old.replaceWith(b);
+    const fire=(ev)=>{try{ev.preventDefault();ev.stopPropagation();}catch(e){} runCheck();};
+    b.addEventListener('pointerup',fire,{passive:false});
+    b.addEventListener('touchend',fire,{passive:false});
+    b.addEventListener('click',fire,{passive:false});
+  }
+  // Run after the page's existing handlers have been installed.
+  setTimeout(()=>ids.forEach(wire),0);
+})();
 </script></body></html>
