@@ -173,6 +173,10 @@ function englishForFollowUp(fr){
     'pouvez vous repondre avec une phrase complete en francais':'Can you answer with a complete sentence in French?'
   };
   if(map[n]) return map[n];
+  if(n.includes('qu est ce qui est le plus important pour vous dans ce travail')) return 'What is most important to you in this work?';
+  if(n.includes('pouvez vous me parler un peu plus de ce projet')) return 'Can you tell me a little more about this project?';
+  if(n.includes('avec quels collegues travaillez vous le plus souvent')) return 'Which colleagues do you work with most often?';
+  if(n.includes('pouvez vous me donner un exemple')) return 'Can you give me an example?';
   if(n.includes('dans quelles situations') && n.includes('parler francais')) return 'In what situations would you like to speak French with more confidence?';
   if(n.includes('avec quels collegues') && n.includes('parler francais')) return 'Which colleagues would you like to speak French with?';
   if(n.includes('a quelle heure') && n.includes('travail')) return n.includes('finissez') ? 'What time do you usually finish work?' : 'What time do you start work?';
